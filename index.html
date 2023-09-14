@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animación de Texto Neon</title>
+    <style>
+        body { 
+            
+            background-image: url('https://www.latercera.com/resizer/4rZ73coDvcOM8zLF3TGoVaoKSbM=/900x600/smart/arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/EPLCPLSV3ZD2LMAGUTCBP6PRDQ.gif'); /* Reemplaza 'URL_DE_LA_IMAGEN_DE_FONDO' con la URL de tu imagen de fondo */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .neon-text {
+            font-family: 'Consolas', monospace;
+            font-size: 2em;
+            color: #fff; /* Color del texto (blanco) */
+            text-align: center;
+            text-transform: uppercase;
+            position: relative;
+        }
+
+        .neon-text::before, .neon-text::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .neon-text::before {
+            animation: neon1 2s linear infinite alternate-reverse;
+            z-index: -1;
+        }
+
+        .neon-text::after {
+            animation: neon2 2s linear infinite alternate-reverse;
+            z-index: -2;
+        }
+
+        @keyframes neon1 {
+            0% {
+                color: #8e2de2; /* Color morado */
+                text-shadow: none;
+            }
+            100% {
+                color: #fff; /* Color blanco */
+                text-shadow: 0 0 10px #8e2de2, 0 0 20px #8e2de2, 0 0 30px #8e2de2, 0 0 40px #8e2de2, 0 0 50px #8e2de2, 0 0 60px #8e2de2, 0 0 70px #8e2de2;
+            }
+        }
+
+        @keyframes neon2 {
+            0% {
+                color: #8e2de2; /* Color morado */
+                text-shadow: none;
+            }
+            100% {
+                color: #fff; /* Color blanco */
+                text-shadow: 0 0 10px #8e2de2, 0 0 20px #8e2de2, 0 0 30px #8e2de2, 0 0 40px #8e2de2, 0 0 50px #8e2de2, 0 0 60px #8e2de2, 0 0 70px #8e2de2;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="neon-text" data-text="Fernando Olvera">Fernando Olvera</div>
+</body>
+</html>
