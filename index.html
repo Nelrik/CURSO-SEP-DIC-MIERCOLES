@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    body {
+        background-color: black;
+    }
+
+    p {
+        color: white;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        /* Distribute items evenly within a row */
+        margin-bottom: 20px;
+        /* Space between rows */
+    }
+
+    .column {
+        flex: 1;
+        /* Each column takes equal space */
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        margin: 5px;
+    }
+
+    /* Animacion de desvanecimiento */
+    .animation {
+        animation: fadeInOut 2s ease-in-out infinite;
+    }
+
+    .First {
+        padding: 10px;
+    }
+
+    @keyframes fadeInOut {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    /* Animacion de zoom */
+    @keyframes zoomIn {
+        0% {
+            font-size: 16px;
+        }
+
+        50% {
+            font-size: 24px;
+        }
+
+        100% {
+            font-size: 16px;
+        }
+    }
+
+    .zooming-text {
+        animation: zoomIn 2s ease-in-out infinite;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba de Git</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- <div class="column">
+                <p class="animation">Texto de prueba para el documento de git</p><br>
+            </div>
+            <br> -->
+            <div class="">
+                <p class="zooming-text">By: Emori Jarek Alvarado Nieto</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
