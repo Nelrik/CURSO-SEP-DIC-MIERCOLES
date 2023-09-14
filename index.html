@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CESAR LOPEZ</title>
+    <style>
+        body {
+            background-color: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 72px;
+            color: #f2f1f1;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+            animation: moveAndExpand 5s linear infinite;
+        }
+
+        @keyframes moveAndExpand {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+            25% {
+                transform: translate(100px, 100px) scale(1);
+            }
+            50% {
+                transform: translate(-100px, -100px) scale(1.2);
+            }
+            75% {
+                transform: translate(100px, 100px) scale(1.4);
+            }
+            100% {
+                transform: translate(0, 0) scale(2);
+                animation: explode 1s ease-in 1 forwards;
+            }
+        }
+
+        @keyframes explode {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(1000px, -1000px) rotate(720deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>CESAR LOPEZ</h1>
+</body>
+</html>
