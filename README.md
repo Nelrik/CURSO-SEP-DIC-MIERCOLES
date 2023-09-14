@@ -1,3 +1,4 @@
 # CURSO-SEP-DIC-MIERCOLES
 Este repositorio es para el ejercicio del curso
-hola mundo
+hola mundo soy Caleb Adrian Nava Medrano
+
