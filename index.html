@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombre con Efecto de Barrido</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: black;
+            overflow: hidden;
+        }
+
+        .nombre {
+            font-size: 36px;
+            color: transparent;
+            background-image: linear-gradient(45deg, magenta, transparent);
+            background-clip: text;
+            -webkit-background-clip: text;
+            animation: barrido 4s linear infinite;
+        }
+
+        @keyframes barrido {
+            0% {
+                background-position: 0 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nombre">Denys Molina</div>
+</body>
+</html>
