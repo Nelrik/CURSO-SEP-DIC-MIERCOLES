@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+ <center>
+    <div class="contenedor">
+      <h1>David Amador Hernandez<span>&#160;</span></h1>
+    </div>
+</body>
+</html>
+    </center>
+    <style>
+
+     body { 
+  font-family: monospace; 
+  background: tomato;
+}
+.contenedor {
+  margin: auto;
+  display: table;
+}
+
+h1 { 
+  position: relative; 
+  float: left;
+  background: tomato;
+  color: #fff;
+  font-size: 2.5em;
+}
+
+h1 span {
+    position:absolute;
+    right:0;
+    width:0;
+    background: tomato;
+    border-left: 1px solid #000;
+    animation: escribir 5s steps(30) infinite alternate;
+}
+
+@keyframes escribir {
+    from { width: 100% }
+    to { width:0 }
+}
+
+
+
