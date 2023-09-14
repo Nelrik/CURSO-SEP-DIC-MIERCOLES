@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <header class="header">
+    <h1 class="glitched">Alan Diaz</h1>
+  </header>  
+  
+</body>
+
+<script>
+  $("header").append("<div class='glitch-window'></div>");
+  //fill div with clone of real header
+  $( "h1.glitched" ).clone().appendTo( ".glitch-window" );
+</script>
+</html>
