@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: coral;
+}
+
+.animated-text {
+    font-size: 6rem;
+    animation: desplazamiento 3s linear infinite;
+}
+
+h1:hover{
+    color: whitesmoke;
+}
+
+@keyframes desplazamiento {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(100px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
