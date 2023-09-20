@@ -80,6 +80,29 @@
         height: 100vh;
         margin: 0;
     }
+    /* Animateon: Colors text */
+    @keyframes colorChange {
+            0% {
+                color: red;
+            }
+            25% {
+                color: blue;
+            }
+            50% {
+                color: green;
+            }
+            75% {
+                color: orange;
+            }
+            100% {
+                color: purple;
+            }
+        }
+
+        #animated-text {
+            font-size: 24px;
+            animation: colorChange 5s linear infinite, zoomIn 2s ease-in-out infinite;
+        }
 </style>
 
 <head>
@@ -96,7 +119,7 @@
             </div>
             <br> -->
             <div class="">
-                <p class="zooming-text">By: Emori Jarek Alvarado Nieto</p>
+                <p id="animated-text">By: Emori Jarek Alvarado Nieto</p>
             </div>
         </div>
     </div>
