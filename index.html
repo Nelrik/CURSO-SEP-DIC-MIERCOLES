@@ -563,24 +563,6 @@ a{
             astronaut.style.top = e.clientY + 'px';
         });
         const text = document.getElementById('text');
-
-document.addEventListener('mousemove', (e) => {
-    const mouseX = e.clientX;
-    const mouseY = e.clientY;
-
-    const textX = text.offsetLeft + text.offsetWidth / 2;
-    const textY = text.offsetTop + text.offsetHeight / 2;
-
-    const deltaX = mouseX - textX;
-    const deltaY = mouseY - textY;
-
-    const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
-    const maxDistance = Math.max(window.innerWidth, window.innerHeight) / 2;
-
-    const opacity = 1 - (distance / maxDistance);
-
-    text.style.opacity = opacity;
-});
     </script>
    <div id="container">
     <span id="text">Hola Mundo, soy Caleb Adrian</span>
