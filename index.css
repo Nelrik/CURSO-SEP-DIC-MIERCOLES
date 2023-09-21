@@ -5,6 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    overflow: hidden;
 }
 
 p {
@@ -114,12 +115,12 @@ p {
     0% {
         left: -100px;
         /* Start position */
-        transform: rotate(0deg);
+        /* transform: rotate(0deg); */
     }
 
     100% {
         left: 100%;
         /* End position (off-screen) */
-        transform: rotate(360deg);
+        /* transform: rotate(360deg); */
     }
 }
