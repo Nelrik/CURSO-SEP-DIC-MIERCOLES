@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fondo con Animación de Glitch</title>
+    <style>
+      body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            overflow: hidden;
+        }
+
+        .glitch-text {
+            font-size: 36px;
+            font-weight: bold;
+            color: #fff;
+            animation: glitch 2s linear infinite;
+        }
+
+        @keyframes glitch {
+            0% {
+                transform: translate(0);
+                text-shadow: -5px 5px 0px #ff0000, -10px 10px 0px #00ff00, -15px 15px 0px #0000ff;
+            }
+            25% {
+                transform: translate(-2px, -2px);
+                text-shadow: -5px 5px 0px #ff0000, 5px -5px 0px #00ff00, -15px 15px 0px #0000ff;
+            }
+            50% {
+                transform: translate(2px, 2px);
+                text-shadow: 5px -5px 0px #ff0000, -5px 5px 0px #00ff00, 15px -15px 0px #0000ff;
+            }
+            75% {
+                transform: translate(-2px, -2px);
+                text-shadow: 5px -5px 0px #ff0000, -5px 5px 0px #00ff00, 15px -15px 0px #0000ff;
+            }
+            100% {
+                transform: translate(0);
+                text-shadow: -5px 5px 0px #ff0000, -10px 10px 0px #00ff00, -15px 15px 0px #0000ff;
+            }
+        }
+
+        .glitch {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('img/susys.png');
+            background-size: cover;
+            animation: glitch 5s linear infinite;
+        }
+
+        @keyframes glitch {
+            0% {
+                transform: translate(0);
+            }
+            25% {
+                transform: translate(10px, -10px);
+            }
+            50% {
+                transform: translate(-10px, 10px);
+            }
+            75% {
+                transform: translate(10px, -10px);
+            }
+            100% {
+                transform: translate(-10px, 10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="glitch"></div>
+    <body>
+        <div class="glitch-text" id="glitchText">Osvaldo Rodriguez</div>
+    
+        <script>
+            const glitchText = document.getElementById("glitchText");
+    
+            setInterval(function() {
+                glitchText.style.left = getRandomInt(-5, 5) + "px";
+                glitchText.style.top = getRandomInt(-5, 5) + "px";
+                glitchText.style.color = getRandomColor();
+            }, 100);
+    
+            function getRandomInt(min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+    
+            function getRandomColor() {
+                const letters = "0123456789ABCDEF";
+                let color = "#";
+                for (let i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+        </script>
+</body>
+</html>
