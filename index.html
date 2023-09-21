@@ -3,6 +3,11 @@
 <style>
     body {
         background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
     }
 
     p {
@@ -27,8 +32,22 @@
         /* Each column takes equal space */
         padding: 10px;
         box-sizing: border-box;
-        border: 1px solid #ccc;
         margin: 5px;
+    }
+
+    #animated-text {
+        font-size: 24px;
+        animation: colorChange 5s linear infinite, zoomIn 2s ease-in-out infinite;
+    }
+
+    /* Style the Nyan Cat image */
+    #nyan-cat {
+        position: absolute;
+        top: 50%;
+        /* Center vertically */
+        transform: translateY(-50%);
+        animation: moveNyan 10s linear infinite;
+        /* Adjust the duration as needed */
     }
 
     /* Animacion de desvanecimiento */
@@ -39,6 +58,7 @@
     .First {
         padding: 10px;
     }
+
 
     @keyframes fadeInOut {
         0% {
@@ -69,40 +89,43 @@
         }
     }
 
-    .zooming-text {
-        animation: zoomIn 2s ease-in-out infinite;
-    }
-
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-    }
     /* Animateon: Colors text */
     @keyframes colorChange {
-            0% {
-                color: red;
-            }
-            25% {
-                color: blue;
-            }
-            50% {
-                color: green;
-            }
-            75% {
-                color: orange;
-            }
-            100% {
-                color: purple;
-            }
+        0% {
+            color: red;
         }
 
-        #animated-text {
-            font-size: 24px;
-            animation: colorChange 5s linear infinite, zoomIn 2s ease-in-out infinite;
+        25% {
+            color: blue;
         }
+
+        50% {
+            color: green;
+        }
+
+        75% {
+            color: orange;
+        }
+
+        100% {
+            color: purple;
+        }
+    }
+
+    /* Define the Nyan Cat animation */
+    @keyframes moveNyan {
+        0% {
+            left: -100px;
+            /* Start position */
+            transform: rotate(0deg);
+        }
+
+        100% {
+            left: 100%;
+            /* End position (off-screen) */
+            transform: rotate(360deg);
+        }
+    }
 </style>
 
 <head>
@@ -114,11 +137,13 @@
 <body>
     <div class="container">
         <div class="row">
-            <!-- <div class="column">
-                <p class="animation">Texto de prueba para el documento de git</p><br>
+            <div class="column">
+                <!-- Add the Nyan Cat GIF here -->
+                <img id="nyan-cat" src="https://tenor.com/bAuiP.gif" alt="Nyan Cat">
             </div>
-            <br> -->
-            <div class="">
+        </div>
+        <div class="row">
+            <div class="column">
                 <p id="animated-text">By: Emori Jarek Alvarado Nieto</p>
             </div>
         </div>
