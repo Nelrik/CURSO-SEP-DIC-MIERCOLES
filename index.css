@@ -1,0 +1,125 @@
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+p {
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    /* Distribute items evenly within a row */
+    margin-bottom: 20px;
+    /* Space between rows */
+}
+
+.column {
+    flex: 1;
+    /* Each column takes equal space */
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 5px;
+}
+
+#animated-text {
+    font-size: 24px;
+    animation: colorChange 5s linear infinite, zoomIn 2s ease-in-out infinite;
+}
+
+/* Style the Nyan Cat image */
+#nyan-cat {
+    position: absolute;
+    top: 50%;
+    /* Center vertically */
+    transform: translateY(-50%);
+    animation: moveNyan 10s linear infinite;
+    /* Adjust the duration as needed */
+}
+
+/* Animacion de desvanecimiento */
+.animation {
+    animation: fadeInOut 2s ease-in-out infinite;
+}
+
+.First {
+    padding: 10px;
+}
+
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Animacion de zoom */
+@keyframes zoomIn {
+    0% {
+        font-size: 16px;
+    }
+
+    50% {
+        font-size: 32px;
+    }
+
+    100% {
+        font-size: 16px;
+    }
+}
+
+/* Animateon: Colors text */
+@keyframes colorChange {
+    0% {
+        color: red;
+    }
+
+    25% {
+        color: blue;
+    }
+
+    50% {
+        color: green;
+    }
+
+    75% {
+        color: orange;
+    }
+
+    100% {
+        color: purple;
+    }
+}
+
+/* Define the Nyan Cat animation */
+@keyframes moveNyan {
+    0% {
+        left: -100px;
+        /* Start position */
+        transform: rotate(0deg);
+    }
+
+    100% {
+        left: 100%;
+        /* End position (off-screen) */
+        transform: rotate(360deg);
+    }
+}
