@@ -48,6 +48,12 @@ p {
     /* Adjust the duration as needed */
 }
 
+#CBAnimation {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
 /* Animacion de desvanecimiento */
 .animation {
     animation: fadeInOut 2s ease-in-out infinite;
@@ -122,5 +128,17 @@ p {
         left: 100%;
         /* End position (off-screen) */
         /* transform: rotate(360deg); */
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
     }
 }
